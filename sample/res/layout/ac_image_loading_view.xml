@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.nostra13.example.universalimageloader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image url from Intent:" />
+
+    <mobi.sherif.util.ui.ImageLoadingView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bitmapConfig="RGB_565"
+        app:cacheInMemory="true"
+        app:cacheOnDisc="false"
+        app:delayBeforeLoading="1000"
+        app:imageForEmptyUri="@drawable/ic_empty"
+        app:imageOnFail="@drawable/ic_error"
+        app:imageOnLoading="@drawable/ic_stub"
+        app:resetViewBeforeLoading="true" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image url hardcoded in xml:" />
+
+    <mobi.sherif.util.ui.ImageLoadingView
+        android:id="@+id/image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bitmapConfig="RGB_565"
+        app:cacheInMemory="true"
+        app:imageUrl="http://cdn.crackberry.com/sites/crackberry.com/files/styles/large/public/topic_images/2013/ANDROID.png?itok=xhm7jaxS"
+        app:cacheOnDisc="false"
+        app:imageForEmptyUri="@drawable/ic_empty"
+        app:imageOnFail="@drawable/ic_error"
+        app:imageOnLoading="@drawable/ic_stub"
+        app:resetViewBeforeLoading="true" />
+
+</LinearLayout>
